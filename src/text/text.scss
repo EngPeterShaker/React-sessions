@@ -1,0 +1,46 @@
+/* css */
+// .wrapper #first{
+//   color:  green;
+// }
+
+// .wrapper  p {
+//   color: red;
+// }
+
+// .wrapper  .paragrapgh{
+//   color : blue
+// }
+
+// npm install node-sass
+/* sass  */
+// https://sass-lang.com/guide
+
+$primary-color: red;
+
+.border_pink {
+  border: 1px solid #fcf;
+}
+
+.wrapperText {
+  #first {
+    color: green;
+  }
+  p {
+    color: red;
+  }
+  .text {
+    .item4 {
+      color: $primary-color;
+    }
+
+    .blue {
+      color: $primary-color;
+    }
+  }
+  .input__style {
+    border: 1px dashed $primary-color;
+  }
+}
+
+// BEM
+// Block Element Modifier
