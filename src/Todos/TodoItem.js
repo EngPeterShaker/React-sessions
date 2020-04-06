@@ -1,7 +1,7 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 
 const TodoItem = (props) => {
-  const { todos , changeStatus, removeItem } = props;
+  const { todos, oldTodos , changeStatus, removeItem } = props;
   console.log('todos', todos)
 
   const obj = {
@@ -9,6 +9,15 @@ const TodoItem = (props) => {
     test : !true
   }
   // console.log('object', obj)
+
+ useEffect(() => {
+   if(todos.length > 5 ){
+
+     document.title = todos.length
+    }else {
+      document.title = 'no new todos'
+    }
+   },[todos.length])
 
   return (
     <div>

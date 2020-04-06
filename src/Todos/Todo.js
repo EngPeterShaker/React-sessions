@@ -3,7 +3,7 @@ import TodoForm from "./TodoForm";
 import TodoItem from "./TodoItem";
 
 const Todo = () => {
-  // const [todos, setTodos] = useState(['todo1' , 'todo2' , 'todo3'])
+  const [oldTodos, setOldTodos] = useState(['todo1' , 'todo2' , 'todo3'])
   const [todos, setTodos] = useState([
     {
       text: 'todo1',
@@ -21,11 +21,15 @@ const Todo = () => {
 
 
   // const [count, setCount] = useState(4)
-  const handleSubmit = (event, inputText) => {
-    //scope variable
-    event.preventDefault();
-    console.log('inputText', inputText)
-    setTodos([...todos, inputText])
+  const handleSubmit = ( text) => {
+    //parameters are scope variable
+    // event.preventDefault();
+    console.log('inputRef', text)
+    const newItem ={
+      text : text ,
+      isCompleted : false
+    }
+    setTodos([...todos, newItem])
   }
 
   const changeStatus = (index) =>{
@@ -51,8 +55,9 @@ const Todo = () => {
     <div>
 
 
-      <TodoItem todos={todos} changeStatus={changeStatus} removeItem={removeItem} />
+      <TodoItem oldTodos={ oldTodos} todos={todos} changeStatus={changeStatus} removeItem={removeItem} />
       <TodoForm handleSubmit={handleSubmit} />
+      <button onClick={() => setOldTodos(['now ' , 'tom' , 'yest'])}> test</button>
     </div>
   )
 }
