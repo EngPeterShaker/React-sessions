@@ -17,10 +17,11 @@ const Todos = event => {
     console.log('text', text)
     let newText  = text
     setText("");
-    Dispatch({
+    const actionObject = {
       type: ADD_TODO,
       payload: newText,
-    });
+    }
+    Dispatch(actionObject);
   };
   return (
     <div>
