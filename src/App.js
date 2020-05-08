@@ -1,14 +1,12 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Todos from "./Todos";
-import TodoList from './TodoList'
+import UsersList from "./components/UsersList";
 
 function App() {
   return (
     <div className="App">
-        <Todos />
-        <TodoList />
+      <UsersList />
     </div>
   );
 

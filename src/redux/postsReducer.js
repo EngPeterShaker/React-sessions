@@ -3,6 +3,7 @@ const initialState= {
   filter : 'hide'
 }
 
+// reducer is pure fn
 function todosReducer(state= initialState , action) {
   switch (action.type) {
     case 'ADD_TODO':
